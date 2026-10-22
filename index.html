@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MCJUnlimited — Technology Solutions for Small Business</title>
+<meta name="description" content="Enterprise outcomes at SMB economics. Mike Amato brings 25+ years of IT experience to automation, dashboards, websites, custom applications, and practical AI for small and mid-sized businesses." />
+<meta property="og:title" content="MCJUnlimited — Technology Solutions for Small Business" />
+<meta property="og:description" content="Practical technology, automation, and AI solutions sized for your business and budget." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"','ui-sans-serif','system-ui','sans-serif'],
+          sans: ['"DM Sans"','ui-sans-serif','system-ui','sans-serif'],
+          mono: ['"JetBrains Mono"','ui-monospace','monospace'],
+        },
+        colors: {
+          background: 'oklch(0.13 0.04 280)',
+          foreground: 'oklch(0.97 0.01 270)',
+          surface: 'oklch(0.18 0.05 280)',
+          muted: { DEFAULT:'oklch(0.22 0.05 280)', foreground:'oklch(0.72 0.03 270)' },
+          primary: { DEFAULT:'oklch(0.62 0.22 274)', foreground:'oklch(0.99 0.005 270)', glow:'oklch(0.74 0.18 290)' },
+          border: 'oklch(0.97 0.01 270 / 0.1)',
+        },
+        borderRadius: { xl: '1rem', '2xl':'1.25rem' },
+      }
+    }
+  }
+</script>
+<style>
+  :root{
+    --gradient-primary: linear-gradient(135deg, oklch(0.62 0.22 274), oklch(0.74 0.18 290));
+    --shadow-glow: 0 20px 60px -20px oklch(0.62 0.22 274 / 0.55);
+    --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.04) inset, 0 20px 50px -30px oklch(0 0 0 / 0.7);
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:5rem}
+  .skip-link{position:fixed;left:1rem;top:-5rem;z-index:100;background:#fff;color:#171128;padding:.75rem 1rem;border-radius:.5rem}
+  .skip-link:focus{top:1rem}
+  a:focus-visible{outline:2px solid #bda8ff;outline-offset:5px}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.animate-fade-up{animation:none}}
+
+  body{
+    background-color: oklch(0.13 0.04 280);
+    color: oklch(0.97 0.01 270);
+    font-family:'DM Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(1000px 600px at 15% -10%, oklch(0.35 0.18 280 / 0.45), transparent 60%),
+      radial-gradient(800px 500px at 95% 5%, oklch(0.4 0.2 300 / 0.3), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em}
+  .text-gradient{background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .surface-card{
+    background: linear-gradient(180deg, oklch(0.97 0.01 270 / 0.04), oklch(0.97 0.01 270 / 0.01));
+    border:1px solid oklch(0.97 0.01 270 / 0.08);
+    border-radius:1.25rem;
+    backdrop-filter:blur(8px);
+  }
+  .grid-bg{
+    background-image:
+      linear-gradient(oklch(0.97 0.01 270 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.97 0.01 270 / 0.04) 1px, transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 80%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 80%);
+  }
+  @keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .animate-fade-up{animation:fade-up .7s ease-out both}
+  .btn-primary{background:var(--gradient-primary);box-shadow:var(--shadow-glow);color:white}
+  .icon{width:1rem;height:1rem;display:inline-block;vertical-align:-2px}
+</style>
+</head>
+<body class="text-foreground">
+<a class="skip-link" href="#about">Skip to content</a>
+<main>
+<!-- Nav -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-background/60 border-b border-white/10">
+  <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-display font-semibold tracking-tight text-lg">MCJ<span class="text-gradient">Unlimited</span></a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+      <a href="#about" class="hover:text-foreground transition">About</a>
+      <a href="#projects" class="hover:text-foreground transition">Work</a>
+      <a href="#skills" class="hover:text-foreground transition">Services</a>
+      <a href="#experience" class="hover:text-foreground transition">Approach</a>
+    </nav>
+    <a href="#contact" class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-white/10 hover:border-primary/60 transition">Get in touch ↗</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  <div class="mx-auto max-w-6xl px-6 pt-24 pb-32 relative">
+    <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface/60 px-3 py-1 text-xs text-muted-foreground animate-fade-up">
+      ✦ Technology services for small &amp; mid-sized businesses
+    </div>
+    <h1 class="mt-6 font-display text-5xl md:text-7xl font-semibold leading-[1.05] animate-fade-up">
+      Enterprise outcomes.<br/><span class="text-gradient">SMB economics.</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-muted-foreground animate-fade-up">
+      I'm <span class="text-foreground font-medium">Mike Amato</span>. With more than 25 years of IT experience and the capabilities of modern AI, I help small and mid-sized businesses save time, put data to work, and turn business problems into practical technology solutions.
+    </p>
+    <div class="mt-10 flex flex-wrap items-center gap-3 animate-fade-up">
+      <a href="#projects" class="btn-primary inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">Explore the work ↗</a>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium border border-white/10 hover:bg-surface/60 transition">Bring me your business problem ↗</a>
+    </div>
+    <dl class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl animate-fade-up">
+      <div><dt class="font-display text-3xl md:text-4xl">25+</dt><dd class="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Years of IT experience</dd></div>
+      <div><dt class="font-display text-3xl md:text-4xl">Automate</dt><dd class="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Give your team time back</dd></div>
+      <div><dt class="font-display text-3xl md:text-4xl">Understand</dt><dd class="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Turn data into decisions</dd></div>
+      <div><dt class="font-display text-3xl md:text-4xl">Grow</dt><dd class="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Build what comes next</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="mx-auto max-w-6xl px-6 py-24">
+  <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary-glow"><span class="h-px w-8 bg-primary-glow/60"></span>01 — About</span>
+  <div class="mt-8 grid md:grid-cols-5 gap-12">
+    <div class="md:col-span-3 space-y-5 text-lg leading-relaxed text-muted-foreground">
+      <h2 class="text-3xl md:text-4xl text-foreground font-semibold">Big capabilities. A practical fit for your business.</h2>
+      <p>Small and mid-sized businesses deserve access to the technology capabilities and business outcomes large enterprises use, without the enterprise-level cost, complexity, or staff requirements.</p>
+      <p>My experience spans infrastructure, systems, applications, troubleshooting, automation, and data. Combined with modern AI, that experience lets me help with everything from automating a single Excel spreadsheet to planning a business-wide technology transformation.</p>
+      <p><span class="text-foreground">I start with the business problem.</span> Where is employee time being lost? What information would help you make better decisions? Where could technology improve revenue, customer experience, efficiency, or profitability?</p>
+      <p>Then I identify the opportunity, choose the right technology, build the solution, and help you put it to work—with scope and cost appropriate for your business.</p>
+    </div>
+    <aside class="md:col-span-2 surface-card p-6">
+      <div class="flex items-center gap-2 text-sm text-muted-foreground">Practical solutions. Business-first thinking.</div>
+      <div class="mt-6 space-y-4 text-sm">
+        <div class="flex justify-between gap-6 border-b border-white/10 pb-3"><span class="text-muted-foreground">Focus</span><span class="text-right">Small &amp; mid-sized businesses</span></div>
+        <div class="flex justify-between gap-6 border-b border-white/10 pb-3"><span class="text-muted-foreground">Currently</span><span class="text-right">Solving real business problems</span></div>
+        <div class="flex justify-between gap-6 border-b border-white/10 pb-3"><span class="text-muted-foreground">Open to</span><span class="text-right">Projects of every size</span></div>
+        <div class="flex justify-between gap-6 border-b border-white/10 pb-3"><span class="text-muted-foreground">Experience</span><span class="text-right">Infrastructure · applications · data · AI</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="flex items-end justify-between gap-6 flex-wrap">
+    <div>
+      <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary-glow"><span class="h-px w-8 bg-primary-glow/60"></span>02 — Selected work</span>
+      <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold">Ideas turned into working solutions.</h2>
+    </div>
+    <p class="text-muted-foreground max-w-sm">Four featured projects exploring how dashboards, digital tools, and thoughtful design can make complex work easier.</p>
+  </div>
+  <div id="projects-grid" class="mt-12 grid md:grid-cols-2 gap-6"></div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="mx-auto max-w-6xl px-6 py-24">
+  <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary-glow"><span class="h-px w-8 bg-primary-glow/60"></span>03 — Services</span>
+  <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold">From one spreadsheet to your next big move.</h2>
+  <div id="skills-grid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="mx-auto max-w-6xl px-6 py-24">
+  <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary-glow"><span class="h-px w-8 bg-primary-glow/60"></span>04 — Approach</span>
+  <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold">How I approach the work.</h2>
+  <ol id="exp-list" class="mt-12 relative border-l border-white/10 ml-3"></ol>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="surface-card p-10 md:p-16 relative overflow-hidden" style="box-shadow:var(--shadow-card)">
+    <div class="absolute inset-0 opacity-30 pointer-events-none" style="background:radial-gradient(1200px 600px at 20% -10%, oklch(0.35 0.18 280 / 0.6), transparent 60%), radial-gradient(900px 500px at 90% 10%, oklch(0.4 0.2 300 / 0.4), transparent 60%)"></div>
+    <div class="relative">
+      <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-primary-glow"><span class="h-px w-8 bg-primary-glow/60"></span>05 — Contact</span>
+      <h2 class="mt-3 font-display text-4xl md:text-6xl font-semibold leading-tight max-w-3xl">Bring me the business problem.<br/><span class="text-gradient">Let’s figure out what is possible.</span></h2>
+      <p class="mt-5 text-muted-foreground max-w-2xl text-lg">A process that takes too much time. Data you wish you could understand. Technology that gets in the way. An idea you want to explore. You don’t have to know what technology you need—let’s start with what your business needs.</p>
+      <div class="mt-8 text-lg text-foreground">No job is too small, and no technology challenge is too large.</div>
+      <a href="mailto:info@mcjunlimited.com" class="btn-primary mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium">Email info@mcjunlimited.com ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="border-t border-white/10 mt-10">
+  <div class="mx-auto max-w-6xl px-6 py-8 flex flex-wrap items-center justify-between gap-3 text-sm text-muted-foreground">
+    <span>© <span id="year"></span> MCJUnlimited. Built with care.</span>
+    <span class="font-mono text-xs">Enterprise outcomes at SMB economics</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const projects = [
+    {title:"Wellness Dashboard", blurb:"A clear, connected view of wellness information, bringing health indicators and trends together to help users understand progress and make more informed decisions.", tags:["Health data","Trend analysis","Reporting"], metric:"Make information useful"},
+    {title:"Video Editing Platform", blurb:"A streamlined workspace for organizing footage and shaping video content, exploring how automation and AI can simplify repetitive editing tasks and support creative work.", tags:["Video workflows","Automation","Applied AI"], metric:"Simplify creative workflows"},
+    {title:"Website Design", blurb:"Responsive websites that explain a business clearly, showcase its services, and make it easy for customers to take the next step—designed around the people who use them.", tags:["Responsive design","User experience","Business websites"], metric:"Build your digital presence"},
+    {title:"Exercise & Nutrition Dashboard", blurb:"An interactive view of workouts, activity, and nutrition that brings daily tracking and progress trends into one place, making personal goals easier to follow.", tags:["Activity tracking","Nutrition","Data visualization"], metric:"Turn daily data into progress"},
+  ];
+  document.getElementById('projects-grid').innerHTML = projects.map(p=>`
+    <article class="group surface-card p-7 hover:border-primary/40 transition relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 h-56 w-56 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur-3xl" style="background:var(--gradient-primary)"></div>
+      <div class="relative">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-mono text-primary-glow">${p.metric}</span>
+          <span class="text-muted-foreground text-xs">Featured project</span>
+        </div>
+        <h3 class="mt-4 font-display text-2xl font-semibold">${p.title}</h3>
+        <p class="mt-3 text-muted-foreground">${p.blurb}</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          ${p.tags.map(t=>`<span class="text-xs font-mono px-2.5 py-1 rounded-full bg-surface border border-white/10 text-muted-foreground">${t}</span>`).join('')}
+        </div>
+      </div>
+    </article>`).join('');
+
+  const skills = [
+    {label:"Automation & Integration", items:"Automate Excel reports, eliminate repeat data entry, and connect systems so your team can focus on higher-value work.", icon:"↻"},
+    {label:"Dashboards & Analytics", items:"Turn scattered spreadsheets and business data into clear reporting, interactive dashboards, and useful insights.", icon:"▥"},
+    {label:"Websites & Applications", items:"Improve your website or build a custom web application around the way your business actually works.", icon:"▦"},
+    {label:"AI & Technology Strategy", items:"Put AI to practical use, modernize infrastructure, explore cloud solutions, improve security, and map your next steps.", icon:"✦"},
+  ];
+  document.getElementById('skills-grid').innerHTML = skills.map(s=>`
+    <div class="surface-card p-6">
+      <div class="text-primary-glow text-xl">${s.icon}</div>
+      <h3 class="mt-4 font-display text-lg font-semibold">${s.label}</h3>
+      <p class="mt-2 text-sm text-muted-foreground leading-relaxed">${s.items}</p>
+    </div>`).join('');
+
+  const experience = [
+    {role:"Start with the business problem", company:"Discover", period:"Step 01", detail:"Understand your goals, where your data lives, and which manual processes consume time. Define what a better outcome would look like for your team and customers."},
+    {role:"Find the right-sized solution", company:"Plan", period:"Step 02", detail:"Identify what to automate, visualize, connect, or improve with AI. Choose technology and a scope that fit your business, budget, and priorities."},
+    {role:"Build and put it to work", company:"Implement", period:"Step 03", detail:"Develop the solution, review it with you, and help implement it in your real workflow. Keep the focus on practical improvements your team can use."},
+    {role:"Help your team move forward", company:"Enable", period:"Step 04", detail:"Provide clear guidance and documentation so your team can use the solution confidently, then assess results against the business goals we defined together."},
+  ];
+  document.getElementById('exp-list').innerHTML = experience.map(e=>`
+    <li class="relative pl-8 pb-10 last:pb-0">
+      <span class="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full ring-4 ring-background" style="background:var(--gradient-primary)"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display text-xl font-semibold">${e.role} <span class="text-muted-foreground font-normal">· ${e.company}</span></h3>
+        <span class="text-xs font-mono text-muted-foreground">${e.period}</span>
+      </div>
+      <p class="mt-2 text-muted-foreground max-w-3xl">${e.detail}</p>
+    </li>`).join('');
+</script>
+</body>
+</html>
